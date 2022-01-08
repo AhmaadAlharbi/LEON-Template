@@ -10,6 +10,12 @@
   --section-background: #f6f6f6;
   --main-duration: 0.5s;
 }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -38,11 +44,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 25px 0;
+  margin-bottom: 10px;
 }
 
 header img {
   width: 60px;
+  margin-top: 20px;
 }
 
 a {
@@ -81,6 +88,219 @@ a {
   color: #333;
   transition: var(--main-duration);
 }
-header .links i:hover {
+
+.links ul li a:hover {
   padding-left: 25px;
+}
+.links:hover ul {
+  display: block;
+}
+/*start hero*/
+.hero {
+  background-image: url(images/landing.jpg);
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  color: var(--main-color);
+  font-size: 50px;
+  font-weight: bold;
+  margin: 15px;
+}
+.hero p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+/*END hero*/
+/*start feature*/
+.features {
+  background-color: var(--section-background);
+}
+.main-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.feature {
+  width: 350px;
+  padding: 20px;
+}
+.feature i {
+  color: var(--main-color);
+  text-align: center;
+  margin: 10px;
+  position: relative;
+}
+.feature h3 {
+  margin: 10px;
+}
+.feature p {
+  margin: 20px;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+/*end feature*/
+/*start services*/
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+/*end featues*/
+/*start services*/
+.main-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.main-services .service {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .main-services .service {
+    flex-direction: column;
+    text-align: center;
+  }
+  .service i {
+    margin-bottom: 15px;
+    color: var(--main-color);
+  }
+}
+.service i {
+  margin-right: 30px;
+  color: var(--main-color);
+}
+.service .text h3 {
+  margin-bottom: 30px;
+}
+.service .text p {
+  line-height: 1.6;
+  margin-right: 30px;
+  color: var(--secondary-color);
+}
+.service img {
+  max-width: 100%;
+  width: 260px;
+  right: 30px;
+  position: relative;
+}
+.service .image {
+  position: relative;
+}
+.service .image::before {
+  content: "";
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+@media (max-width: 1199px) {
+  .service .image {
+    display: none;
+  }
+}
+
+/*end services*/
+/*start portfolio*/
+.Portfolio {
+  background-color: var(--section-background);
+}
+.main-portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+.card img {
+  max-width: 100%;
+}
+.card {
+  background-color: white;
+}
+.card .info h3 {
+  margin: 10px;
+}
+.card .info p {
+  margin: 10px;
+}
+/*end portfolio*/
+/*start about*/
+.about {
+  margin-top: 20px;
+}
+.main-about {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main-about .image img {
+  max-width: 100%;
+  width: 300px;
+}
+.main-about .image {
+  position: relative;
+  width: 250px;
+  height: 375px;
+}
+.main-about .image::before {
+  content: "";
+  position: absolute;
+  background-color: #ebeced;
+  width: 100px;
+  height: calc(100% + 80px);
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.main-about .image::after {
+  top: -40px;
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 300px;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  z-index: -1;
+  right: -150px;
+}
+.image-text {
+  padding: 20px;
+  flex-basis: calc(100% - 500px);
+}
+.main-about .image-text p:first-of-type {
+  font-weight: 800;
+  margin: 40px;
+  line-height: 1.6;
+}
+.main-about .image-text p:last-of-type {
+  margin: 40px;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+.main-about .image-text hr {
+  width: 50%;
+  display: inline-block;
+  border-color: var(--main-color);
+  margin: 40px;
 }
