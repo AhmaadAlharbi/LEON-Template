@@ -162,6 +162,14 @@ a {
   text-align: center;
   color: #797979;
 }
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
 /*end featues*/
 /*start services*/
 .main-services {
@@ -253,6 +261,13 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 60px;
+}
+@media (max-width: 991px) {
+  .main-about{
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .main-about .image img {
   max-width: 100%;
@@ -262,6 +277,12 @@ a {
   position: relative;
   width: 250px;
   height: 375px;
+
+}
+@media (max-width: 991px) {
+  .main-about .image{
+    margin: 0 auto 60px;
+  }
 }
 .main-about .image::before {
   content: "";
@@ -284,6 +305,12 @@ a {
   z-index: -1;
   right: -150px;
 }
+@media (max-width: 991px) {
+  .main-about .image::before,
+  .main-about .image::after {
+    display: none;
+  }
+}
 .image-text {
   padding: 20px;
   flex-basis: calc(100% - 500px);
@@ -303,4 +330,45 @@ a {
   display: inline-block;
   border-color: var(--main-color);
   margin: 40px;
+}
+/*srart contact*/
+.contact{
+  background-color: var(--section-background);
+  padding: 40px;
+}
+.main-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.main-contact h2{
+  color: var(--secondary-color);
+  font-weight: 800;
+  font-size: 35px;
+}
+.main-contact a{
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 800;
+  margin: 20px;
+}
+@media (max-width: 767px) {
+.main-contact a,.main-contact h2{
+font-size: 20px;
+}
+.social{
+  margin: 60px;
+
+}
+}
+/*end contact*/
+/*footer*/
+footer{
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 40px;
 }
